@@ -50,7 +50,7 @@ To use the Lang-Bound dapp is very simple and straight forward, users have to vi
 
 ## NFT Rewards
 
-Lang-Bound rewards users with NFTs for their language learning achievements. These digital collectibles can be viewed, traded, or showcased in your collection. NFTs are a unique way to showcase your language learning progress.
+Lang-Bound rewards users with Token Bound NFTs for their language learning achievements. Through the TBA contract they can pperform the quests/quiz and earn TBA NFT digital collectibles after can be viewed, traded, or showcased in your collection. NFTs are a unique way to showcase your language learning progress.
 
 ## Mentor Program
 
@@ -58,7 +58,7 @@ Lang-Bound's Mentor Program allows experienced language learners to share their 
 
 ## Shop
 
-In the Lang-Bound Shop, users can purchase additional "lives" for the quiz, ensuring uninterrupted language learning practice. This in-app currency helps keep users engaged and motivated.
+In the Lang-Bound Shop, users can purchase additional "lives" for the quiz using the TBA accounts, ensuring uninterrupted language learning practice. This in-app currency helps keep users engaged and motivated.
 
 ## Language Community
 
