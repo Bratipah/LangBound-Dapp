@@ -1,1 +1,1 @@
-# LangBound-Dapp
+# LangBound
