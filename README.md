@@ -1,4 +1,4 @@
-# Lang-Bound
+
 # Lang-Bound Learning DApp
 
 ## Table of Contents
