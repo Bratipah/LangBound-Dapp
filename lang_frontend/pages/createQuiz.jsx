@@ -157,9 +157,9 @@ const CreateQuiz = () => {
     <DefaultLayout>
       <Navbar />
       <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg max-h-screen overflow-y-auto">
-        <h3 className="text-2xl font-bold mb-4 text-center">Create Quiz</h3>
+        <h3 className="text-2xl font-bold mb-4 text-center">Create French to English Quiz</h3>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Title</label>
+          <label className="block text-gray-700 font-bold mb-2">Translate the word "Hello" to english</label>
           <input 
             className="w-full p-2 border border-gray-300 rounded-md" 
             type="text" 
@@ -167,7 +167,7 @@ const CreateQuiz = () => {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-gray-700 font-bold mb-2">Description</label>
+          <label className="block text-gray-700 font-bold mb-2">Translate the word "Hello" to french</label>
           <input 
             className="w-full p-2 border border-gray-300 rounded-md" 
             type="text" 
@@ -183,7 +183,7 @@ const CreateQuiz = () => {
         </button>
 
         <div className="mt-8">
-          <h3 className="text-xl font-bold mb-4">Quiz #</h3>
+          <h3 className="text-xl font-bold mb-4">EnglishFrench Quiz #</h3>
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2">Question</label>
             <input 
@@ -205,9 +205,9 @@ const CreateQuiz = () => {
             Create
           </button>
 
-          <h3 className="text-xl font-bold mb-4">Create Choices</h3>
+          <h3 className="text-xl font-bold mb-4">Create Language Choices</h3>
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2">Question Number</label>
+            <label className="block text-gray-700 font-bold mb-2">Language Number</label>
             <input 
               className="w-full p-2 border border-gray-300 rounded-md" 
               ref={questionId} 
@@ -237,7 +237,7 @@ const CreateQuiz = () => {
                   );
                 })}
               <div className="mb-4">
-                <label className="block text-gray-700 font-bold mb-2">Option Text</label>
+                <label className="block text-gray-700 font-bold mb-2">Language Option Text</label>
                 <input 
                   className="w-full p-2 border border-gray-300 rounded-md" 
                   ref={optionText} 
@@ -271,7 +271,7 @@ const CreateQuiz = () => {
         </div>
 
         <div className="mt-8">
-          <h3 className="text-xl font-bold mb-4">Retrieve Quiz Id</h3>
+          <h3 className="text-xl font-bold mb-4">Retrieve Languages' Quiz Id</h3>
           <div className="mb-4">
             <input 
               className="w-full p-2 border border-gray-300 rounded-md" 
@@ -282,7 +282,7 @@ const CreateQuiz = () => {
             className="w-full p-2 bg-gray-500 text-white rounded-md mb-4" 
             onClick={getQuiz}
           >
-            Retrieve
+            Retrieve Language Quiz responses
           </button>
           {quiz && (
             <div className="p-4 bg-gray-100 rounded-md">
