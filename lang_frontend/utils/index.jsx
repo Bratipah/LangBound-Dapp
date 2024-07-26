@@ -53,6 +53,12 @@ export const SidebarTab = [
     active: "chat",
     route: "/store",
   },
+  {
+    name: "Create Quiz",
+    icons: ArchiveIcon,
+    active: "create",
+    route: "/createQuiz",
+  },
 ];
 
 export const mentors = [
