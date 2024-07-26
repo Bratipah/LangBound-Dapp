@@ -48,8 +48,6 @@ export const FlowProvider = ({ children }) => {
     setConnection(wallet)
     setProvider(wallet.account)
     setWalletAddress(wallet.selectedAddress)
-
-      route.push('/dashboard')
   }
   };
   
