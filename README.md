@@ -37,7 +37,7 @@ Lang-Bound boasts a range of exciting features:
 6. **Community**: Join and interact ina communities to elevate your skills in particular langauge and meet up with people who also want to learn and grow.
 
 ## Demo
-[Slides](https://drive.google.com/drive/folders/1_RcvUambZybzvDknpzNitB5Z5uyKxMvw)
+[Slides](https://drive.google.com/file/d/1s5HR9lOgryFYNnnaFlCcICACkUOEncXL/view?usp=drivesdk)
 
 
 ## Usage
