@@ -1,47 +1,59 @@
-import React from "react";
-import { useAppContext } from "../provider/AppProvider";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import {useAppContext} from '../context/AppProvider'
 
-const Navbar = () => {
-  const { handleWalletConnection, handleWalletDisconnection, address } =
-    useAppContext();
+export default function Navbar() {
+  const [loading, setLoading] = useState()
 
-  const disconnectWallet = () => {
-    if (window.confirm("are you sure you want to disconnect") == true) {
-      handleWalletDisconnection();
-      window.location.reload();
-    }
-  };
 
-  const barItems = [
-    { item_name: "home", item_link: "" },
+  const { handleWalletConnection, handleWalletDisconnection, address, contract } =
+  useAppContext();
 
-    { item_name: "create account", item_link: "create-account" },
-    { item_name: "create quiz", item_link: "create-quiz" },
-    { item_name: "create questions", item_link: "create-questions" },
-    { item_name: "answer questions", item_link: "answer-questions" },
-  ];
+const disconnectWallet = () => {
+  if (window.confirm("are you sure you want to disconnect") == true) {
+    handleWalletDisconnection();
+    window.location.reload();
+  }
+};
 
+const enroll = () => {
+  if (address) {
+    const myCall = contract.populate("create_participant", []);
+    setLoading(true);
+    contract["create_participant"](myCall.calldata)
+      .then((res) => {
+        console.info("Successful Response:", res);
+      })
+      .catch((err) => {
+        console.error("Error: ", err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  } else {
+    handleWalletConnection();
+  }
+};
   return (
-    <div className="w3-bar w3-padding w3-blue">
-      <span className="w3-bar-item w3-large">Stark Quiz</span>
-      {barItems.map((item, index) => (
-        <Link to={`/${item.item_link}`} className="w3-bar-item" key={index}>
-          {item.item_name}
-        </Link>
-      ))}
+    <nav className="bg-Black shadow-xl p-4">
 
+<div className="flex self-end items-end justify-en">
       <div className="w3-right">
         {address ? (
-          <button
+          <div className="flex-row items-center space-x-6">
+             <button
             onClick={disconnectWallet}
-            className="w3-btn w3-round w3-border w3-border-white"
+            className="bg-Accent text-Black px-[20px] py-[12px] rounded-[8px] text-[12px] lg:text-[16px] lg:px-[26px] font-bold"
           >
-            {address.substring(0, 5)}...{address.substring(address.length - 5)}
+           Disconnect
           </button>
+          <button className="bg-Accent text-Black px-[20px] py-[12px] rounded-[8px] text-[12px] lg:text-[16px] lg:px-[26px] font-bold" onClick={enroll}>
+           Click to enroll
+         </button>
+          </div>
+         
         ) : (
           <button
-            className="w3-btn w3-round w3-border w3-border-white"
+            className="bg-Accent text-Black px-[20px] py-[12px] rounded-[8px] text-[12px] lg:text-[16px] lg:px-[26px] font-bold"
             onClick={handleWalletConnection}
           >
             Connect wallet
@@ -49,7 +61,6 @@ const Navbar = () => {
         )}
       </div>
     </div>
+    </nav>
   );
-};
-
-export default Navbar;
+}
